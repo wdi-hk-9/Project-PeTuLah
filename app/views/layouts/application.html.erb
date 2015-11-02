@@ -8,7 +8,22 @@
 </head>
 <body>
 
-<%= yield %>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+      <%= render "layouts/navbar" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+
+
+      <%= yield %>
+
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
