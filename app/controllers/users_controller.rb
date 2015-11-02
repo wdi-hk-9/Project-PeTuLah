@@ -1,8 +1,5 @@
 class UsersController < ApplicationController
 
-  def index
-    @users = User.all
-  end
 
   def new
     @user = User.new
@@ -11,9 +8,11 @@ class UsersController < ApplicationController
   def create
   @user = User.new user_params
   if @user.save
-   redirect_to users_path
+    flash[:success] = "You have successfully signed up!"
+    redirect_to root_path
   else
-   render 'new'
+    flash[:error] = "Invalid email/password combination"
+    render 'new'
   end
  end
 

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'static_pages#index'
 
-  resources :users, only: [:new, :create, :index]
+  resources :users, only: [:new, :create]
 
   get "/signup", to: "users#new"
 
