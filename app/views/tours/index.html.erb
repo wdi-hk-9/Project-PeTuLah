@@ -1,0 +1,7 @@
+<h1> All tours </h1>
+<% @tours.each do |tour|%>
+  <%= tour.name %>
+  <%= tour.description %>
+  <%= tour.language %>
+  <%= tour.image %>
+<% end %>
