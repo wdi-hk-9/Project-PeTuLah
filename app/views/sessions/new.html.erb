@@ -1,18 +1,18 @@
-<div class="well">
+<div class="well text-center">
 
   <h4>Login</h4>
 
-  <%= form_tag sessions_path, {class: "form"} do %>
+  <%= form_tag sessions_path, {class: "form form-horizontal"} do %>
     <div class="field form-group">
-      <%= label_tag :email %>
-      <%= text_field_tag :email %>
+      <%= label_tag :email, nil, class: "col-xs-3 control-label" %>
+      <%= text_field_tag :email, nil, class: "col-xs-8" %>
     </div>
     <div class="field form-group">
-      <%= label_tag :password %>
-      <%= password_field_tag :password %>
+      <%= label_tag :password, nil, class: "col-xs-3 control-label" %>
+      <%= password_field_tag :password, nil, class: "col-xs-8" %>
     </div>
-    <div class="form-group">
-      <%= check_box_tag :remember, "true", false%>Remember Me!
+    <div class="form-group text-center">
+      <%= check_box_tag :remember, "true", false %><span>  Remember Me!</span>
     </div>
     <div class="actions form-group text-center">
       <button class="btn btn-info"> Log in

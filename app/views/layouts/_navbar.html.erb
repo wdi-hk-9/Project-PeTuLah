@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">PeTuLah</a>
+      <a class="navbar-brand" href="/">PeTuLah</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -18,9 +18,11 @@
         <% if current_user %>
           <li><a href="#"> Hello, <%= current_user.email %> ! </a></li>
           <li><%= link_to 'Logout', logout_path, method: :delete%></li>
+          <li><%= link_to 'All tours', tours_path %></li>
         <% else %>
           <li><%= link_to "Sign-up", signup_path%></li>
           <li><a href="/login">Login</a></li>
+          <li><%= link_to 'All tours', tours_path %></li>
         <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
