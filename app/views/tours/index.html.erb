@@ -1,0 +1,21 @@
+<div class="text-center">
+  <h2> All tours </h2>
+</div>
+
+<% @tours.each do |tour|%>
+  <div class="jumbotron">
+    <p>Tour name: <%= tour.name %>
+    </p>
+    <p>Description: <%= tour.description %>
+    </p>
+    <p>Language: <%= tour.language %>
+    </p>
+    <p><%= image_tag tour.image, width: 200 %>
+    <%= link_to "More details", tour_path(tour.id), class: "btn btn-info" %>
+    </p>
+  </div>
+<% end %>
+
+<div>
+<%= link_to 'Homepage', root_path, class: "btn btn-info" %>
+</div>
