@@ -1,25 +1,26 @@
 
 <div class="text-center tour-header">
-    <h2> All tours </h2>
+  <h2> All tours </h2>
 </div>
-
-
 
 <% @tours.each do |tour|%>
   <div class="tours">
-    <div class="text-center"><h5><%= tour.name %></h5>
+    <div class="text-center">
+      <h5><%= tour.name %></h5>
     </div>
-    <div class="text-left"><h7>Description: <%= tour.description %></h7>
+    <div class="text-left">
+      <h7>Description: <%= tour.description %></h7>
     </div>
-    <div class="tours-img text-center"><%= image_tag tour.image, width: 500 %>
+    <div class="tours-img text-center">
+      <%= image_tag tour.image, width: 500 %>
     </div>
     <br>
     <div class="text-center">
-    <%= link_to "More details", tour_path(tour.id), class: "btn btn-info" %>
+      <%= link_to "More details", tour_path(tour.id), class: "btn btn-info" %>
     </div>
   </div>
 <% end %>
 
 <div class="text-right">
-<%= link_to 'Back to homepage', root_path%>
+  <%= link_to 'Back to homepage', root_path%>
 </div>
