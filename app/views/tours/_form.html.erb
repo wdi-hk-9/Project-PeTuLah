@@ -1,0 +1,31 @@
+<%= form_for @tour do |f| %>
+  <% if @tour.errors.any? %>
+  <div class="error_messages">
+    <ul>
+      <% for message in @tour.errors.full_messages %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :language %>
+    <%= f.text_field :language %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+  </div>
+  <div class="actions btn">
+    <%= f.submit "Create tour!" %>
+  </div>
+<% end %>
