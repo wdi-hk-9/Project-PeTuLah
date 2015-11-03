@@ -18,6 +18,7 @@
 @import "bootstrap";
 
 $font-stack:    Helvetica, sans-serif;
+$font-family: 'Uncial Antiqua', cursive;
 /*$primary-color: #333;*/
 $primary-color: #777;
 
@@ -55,7 +56,6 @@ nav {
 
   .navbar-brand {
     color: #FF5F49;
-    /*background-color: #68FFBC;*/
   }
 
   #bs-example-navbar-collapse-1 {
@@ -67,13 +67,8 @@ nav {
   color: darken($primary-color, 30%);
 }
 
-.checkbox {
-  margin: 20px;
-  padding: 6px;
-  color: #FF495F;
+#lp-background{
+  background: url("http://conference.cs.cityu.edu.hk/wise2010/images/Background.jpg") no-repeat;
+  background-size: cover;
+  height: 250px;
 }
-
-#remember {
-  margin: 1px 0px 3px -17px;
-}
-
