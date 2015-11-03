@@ -9,9 +9,8 @@ class UsersController < ApplicationController
   @user = User.new user_params
   if @user.save
     flash[:success] = "You have successfully signed up!"
-    redirect_to root_path
+    redirect_to "/"
   else
-    flash[:error] = "Invalid email/password combination"
     render 'new'
   end
  end

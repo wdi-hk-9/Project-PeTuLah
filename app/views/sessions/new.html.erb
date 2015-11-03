@@ -1,17 +1,21 @@
-<h1>Login</h1>
+<h4>Login</h4>
 <%= form_tag sessions_path do %>
-  <div class="field">
+  <div class="field form-group">
+    <%= label_tag :email %>:
     <%= text_field_tag :email %>
   </div>
-  <div class="field">
-    <%= label_tag :password %>
+  <div class="field form-group">
+    <%= label_tag :password %>:
     <%= password_field_tag :password %>
   </div>
-  <div class="actions">
+  <div class="form-group">
+    <%= check_box_tag :remember, "true", false%>Remember Me!
+  </div>
+  <div class="actions form-group">
     <%= submit_tag "Log in" %>
   </div>
-  <div class="checkbox">
-    <%= check_box_tag :remember, "true", false%>
-    Remember Me!
+  <div>
+  Don't have an account? <%= link_to "Sign-up", signup_path%>
+  today!
   </div>
 <% end %>

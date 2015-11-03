@@ -9,16 +9,18 @@ class SessionsController < ApplicationController
 
   # email_found && params[:password] == hashed_password ?
   if user && user.authenticate(params[:password])
-    redirect_to "/users", notice: "logged in!"
+    redirect_to "/"
+    flash[:success] = "Logged in!"
   else
-   flash.now.alert = "invalid login credentials"
-   render "new"  # sessions#new
+    flash[:danger] = "Invalid login credentials."
+    render "new"  # sessions#new
   end
 
  end
 
  def destroy
-  redirect_to root_url, notice: "logged out!"
+  flash[:danger] = "You are now logged out!"
+  redirect_to "/"
  end
 
 end
