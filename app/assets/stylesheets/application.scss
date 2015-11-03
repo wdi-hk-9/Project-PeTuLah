@@ -17,17 +17,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-$font-stack:    Helvetica, sans-serif;
-$font-family: 'Uncial Antiqua', cursive;
-/*$primary-color: #333;*/
 $primary-color: #777;
 
 body {
-  font: 100% $font-stack;
+  font-family: 'Rye', cursive;
   color: $primary-color;
 }
 
 nav {
+
   ul {
     margin: 0;
     padding: 0;
@@ -36,7 +34,6 @@ nav {
 
   li {
     display: inline-block;
-    background-color: #68FFBC;
   }
 
   a {
@@ -46,29 +43,36 @@ nav {
     color: #2A31FF;
   }
 
-  .navbar-header {
-    background-color: #68FFBC;
-  }
-
-  .navbar-toggle {
-    color: #68FFBC;
-  }
-
   .navbar-brand {
     color: #FF5F49;
+    font-size: 30px;
   }
 
-  #bs-example-navbar-collapse-1 {
-    background-color: #68FFBC;
-  }
 }
 
-.btn {
-  color: darken($primary-color, 30%);
+.btn-info {
+  font-size: 10px;
 }
 
 #lp-background{
   background: url("http://conference.cs.cityu.edu.hk/wise2010/images/Background.jpg") no-repeat;
   background-size: cover;
-  height: 250px;
+  height: 100%;
+}
+
+.jumbotron{
+  min-height: 500px;
+  font: white solid;
+}
+
+.field_with_errors input {
+  border: 1px solid red;
+}
+
+.form-group{
+  font-size: 15px;
+}
+
+.container-fluid{
+  margin-top: 12px;
 }
