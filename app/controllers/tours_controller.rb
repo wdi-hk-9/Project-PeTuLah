@@ -19,7 +19,23 @@ class ToursController < ApplicationController
     end
   end
 
+  def show
+    @tour = Tour.find(params[:id])
+  end
+
   def edit
+    @tour = Tour.find(params[:id])
+  end
+
+  def update
+    @tour = Tour.find(params[:id])
+    if @tour.update(tour_params)
+      flash[:success] = "Tour is edited!"
+      redirect_to tour_path
+    else
+      flash[:error] = "Tour cannot be saved!"
+      render 'new'
+    end
   end
 
   def destroy
@@ -28,5 +44,10 @@ class ToursController < ApplicationController
 private
   def tour_params
   params.require(:tour).permit( :name, :description, :language, :image)
- end
+  end
+
+  def set_tour
+      @tour = Tour.find(params[:id])
+  end
+
 end
