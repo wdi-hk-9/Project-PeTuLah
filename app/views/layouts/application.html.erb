@@ -17,8 +17,9 @@
   </div>
   <div class="row">
     <div class="col-xs-10 col-xs-offset-1">
-
-
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
       <%= yield %>
 
     </div>
