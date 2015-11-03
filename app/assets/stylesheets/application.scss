@@ -16,3 +16,64 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+$font-stack:    Helvetica, sans-serif;
+/*$primary-color: #333;*/
+$primary-color: #777;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+    background-color: #68FFBC;
+  }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+    color: #2A31FF;
+  }
+
+  .navbar-header {
+    background-color: #68FFBC;
+  }
+
+  .navbar-toggle {
+    color: #68FFBC;
+  }
+
+  .navbar-brand {
+    color: #FF5F49;
+    /*background-color: #68FFBC;*/
+  }
+
+  #bs-example-navbar-collapse-1 {
+    background-color: #68FFBC;
+  }
+}
+
+.btn {
+  color: darken($primary-color, 30%);
+}
+
+.checkbox {
+  margin: 20px;
+  padding: 6px;
+  color: #FF495F;
+}
+
+#remember {
+  margin: 1px 0px 3px -17px;
+}
+
