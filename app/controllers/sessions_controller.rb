@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 
   # email_found && params[:password] == hashed_password ?
   if user && user.authenticate(params[:password])
-    redirect_to "/users", notice: "logged in!"
+    redirect_to tours_path, notice: "logged in!"
   else
    flash.now.alert = "invalid login credentials"
    render "new"  # sessions#new
