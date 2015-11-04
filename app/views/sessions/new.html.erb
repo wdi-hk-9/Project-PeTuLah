@@ -1,6 +1,6 @@
-<div class="well text-center">
+<div class="well text-center form-box">
 
-  <h4>Login</h4>
+  <h2>Login</h2>
 
   <%= form_tag sessions_path, {class: "form form-horizontal"} do %>
     <div class="field form-group">
@@ -15,7 +15,7 @@
       <%= check_box_tag :remember, "true", false %><span>  Remember Me!</span>
     </div>
     <div class="actions form-group text-center">
-      <button class="btn btn-info"> Log in
+      <button class="btn btn-lg btn-success"> Log in
       </button>
     </div>
     <div class="form-group text-center">
