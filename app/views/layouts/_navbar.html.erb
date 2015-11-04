@@ -16,7 +16,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
-          <li><a href="#"> Hello, <%= current_user.email %> ! </a></li>
+          <li><%= link_to 'Hello,  current_user.email', bookings_path%></li>
           <li><%= link_to 'Logout', logout_path, method: :delete%></li>
           <li><%= link_to 'All tours', tours_path %></li>
         <% else %>

@@ -1,0 +1,24 @@
+<div class="text-center">
+  <h2> Your bookings details</h2>
+</div>
+
+<% @bookings.each do |booking|%>
+  <div class=" well bookings">
+    <div class="text-center">
+      <h5>Tour name: <%= booking.tour.name%></h5>
+    </div>
+    <div class="text-center">
+      <h5>Start_date: <%= booking.start_date %></h7>
+    </div>
+    <div class="text-center">
+      <h5>Start_date: <%= booking.party_of %></h7>
+    </div>
+    <div class="text-center">
+      <%= link_to "Tour details", tour_path(booking.tour_id), class: "btn btn-info" %>
+    </div>
+  </div>
+<% end %>
+
+<div class="text-right">
+  <%= link_to 'Back to homepage', root_path%>
+</div>

@@ -1,13 +1,20 @@
-<div class="text-center">
+<div class="text-center well">
   <h2><%= @tour.name %></h2>
-
-  <p><%= image_tag @tour.image, width: 200 %></p>
-  <p><%= @tour.description %></p>
-  <p>Language: <%= @tour.language %></p>
-  <p>Duration: <%= @tour.duration %> minutes</p>
-  <p>Price: <%= @tour.price %></p>
+  <div class="col-md-6 portfolio-item">
+    <p><%= image_tag @tour.image, class: "img-responsive tour-images"%></p>
+  </div>
+  <div class="col-md-6 portfolio-item">
+    <p><%= @tour.description %></p>
+    <p>Language: <%= @tour.language %></p>
+    <p>Duration: <%= @tour.duration %> minutes</p>
+    <p>Price: <%= @tour.price %></p>
+  </div>
 </div>
 
 <div class="text-center">
-  <%= link_to 'Back to all tours', tours_path, class: "btn btn-info"%>
+  <%= link_to 'BOOK NOW!', new_tour_booking_path(@tour.id), class: "btn btn-info"%>
+</div>
+
+<div class="text-center">
+  <%= link_to 'Back to all tours', tours_path %>
 </div>

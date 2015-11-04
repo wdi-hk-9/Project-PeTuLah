@@ -21,7 +21,6 @@ $primary-color: #777;
 
 body {
   font-family: 'Rye', cursive;
-  color: $primary-color;
 }
 
 nav {
@@ -47,17 +46,10 @@ nav {
     color: #FF5F49;
     font-size: 30px;
   }
-
 }
 
 .btn-info {
   font-size: 10px;
-}
-
-#lp-background{
-  background: url("http://conference.cs.cityu.edu.hk/wise2010/images/Background.jpg") no-repeat;
-  background-size: cover;
-  height: 100%;
 }
 
 .jumbotron{
@@ -71,10 +63,6 @@ nav {
 }
 
 .tours{
-  padding: 5px 15px;
-  margin-bottom: 10px;
-  min-height: 300px;
-  background: -webkit-linear-gradient(top, rgba(242,246,248,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(224,239,249,1) 100%);
   box-shadow: 11px -8px 4px 2px rgba(0,0,0,0.45);
 }
 
