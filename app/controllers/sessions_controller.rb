@@ -21,5 +21,4 @@ class SessionsController < ApplicationController
   flash[:danger] = "You are now logged out!"
   redirect_to "/"
  end
-
 end

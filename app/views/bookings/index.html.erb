@@ -11,10 +11,11 @@
       <h5>Start_date: <%= booking.start_date %></h7>
     </div>
     <div class="text-center">
-      <h5>Start_date: <%= booking.party_of %></h7>
+      <h5>Party_of: <%= booking.party_of %></h7>
     </div>
     <div class="text-center">
       <%= link_to "Tour details", tour_path(booking.tour_id), class: "btn btn-info" %>
+      <%= link_to "Edit booking", edit_booking_path(booking.tour_id), class: "btn btn-info" %>
     </div>
   </div>
 <% end %>

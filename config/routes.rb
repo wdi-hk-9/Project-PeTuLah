@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :tours,    only: [:index, :show] do
     resources :bookings, only: [:new, :create]
   end
-  resources :bookings, only: [:index, :show]
+  resources :bookings, only: [:index, :show, :edit, :update]
 
   get "signup",    to: "users#new"
   get "login",     to: "sessions#new"

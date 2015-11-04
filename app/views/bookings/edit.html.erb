@@ -1,9 +1,9 @@
 <div class="well text-left">
 
-  <h4>Just one step away from booking your tour!</h4>
-  <h5>Currently booking tour:<%= @tour.name %> </h5>
+  <h4>You are editing tour</h4>
+  <p>Tour booked: <%= @booking.tour.name %></p>
 
-  <%= form_for @booking, {url: tour_bookings_path(@tour.id), html: {class: "form-horizontal"}} do |f| %>
+  <%= form_for @booking, {method: "put", html: {class: "form-horizontal"}} do |f| %>
 
     <% if @booking.errors.any? %>
     <div class="error_messages alert alert-danger">
@@ -32,12 +32,8 @@
       <%= f.text_field :remarks, class: "col-xs-4 input-lg" %>
     </div>
     <div class="actions form-group text-center">
-      <button class="btn btn-success"> Send your booking!
+      <button class="btn btn-success"> Edit your booking!
       </button>
-    </div>
-    <div class="form-group text-center">
-      Interested in other tour instead? <%= link_to "See all tours", tours_path%>
-    today!
     </div>
   <% end %>
 </div>

@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :authenticate, only: [:show, :index, :new, :create]
+  before_action :authenticate, only: [:show, :index, :new, :create, :edit]
 
   def index
     @bookings = current_user.bookings
@@ -27,8 +27,23 @@ class BookingsController < ApplicationController
     end
   end
 
+  def edit
+    @booking = Booking.find(params[:id])
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    if @booking.update(booking_params)
+      flash[:success] = "Booking is edited!"
+      redirect_to booking_path(@booking.id)
+    else
+      flash[:danger] = "Changes to booking cannot be saved!"
+      render booking_path(@booking.id)
+    end
+  end
+
 private
   def booking_params
-    params.require(:booking).permit( :start_date, :start_time, :party_of)
+    params.require(:booking).permit( :start_date, :start_time, :party_of, :remarks)
   end
 end
