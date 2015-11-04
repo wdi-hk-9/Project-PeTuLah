@@ -109,8 +109,16 @@ nav {
 
 .lp-filter-row{
   background-color: rgba(0, 0, 0, 0.3);
+  min-height: 70px;
 }
 
+#search-form{
+  margin: 12px;
+  border-color: transparent;
+}
+#search{
+  width: 60%;
+}
 .form-box {
   background-color: transparent;
   border-color: transparent;
@@ -121,7 +129,7 @@ nav {
 }
 
 .btn {
-  border-radius: 20px;
+  border-radius: 10px;
   text-transform: uppercase;
 }
 

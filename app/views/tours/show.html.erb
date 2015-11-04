@@ -3,24 +3,23 @@
     <%= link_to 'Home', root_path%> -->
     <%= link_to 'All Tours', tours_path, class: "active"%> -->
     <%= @tour.name %>
-    <p></p>
   </div>
   <div class="col-md-6 portfolio-item">
-    <p><%= image_tag @tour.image, class: "img-responsive tour-images"%></p>
+    <%= image_tag @tour.image, class: "img-responsive tour-images"%>
   </div>
   <h2><%= @tour.name %></h2>
   <div class="col-md-6 portfolio-item">
     <h5>
-      <p><%= @tour.description %></p>
-      <p>Language: <%= @tour.language %></p>
-      <p>Duration: <%= @tour.duration %> minutes</p>
-      <p>Price: HK$ <%= @tour.price %> per person</p>
+      <%= @tour.description %>
+      Language: <%= @tour.language %>
+      Duration: <%= @tour.duration %> minutes
+      Price: HK$ <%= @tour.price %> per person
     </h5>
   </div>
 </div>
 
 <div class="text-center">
-  <%= link_to 'BOOK NOW!', new_tour_booking_path(@tour.id), class: "btn btn-info"%>
+  <%= link_to 'BOOK NOW!', new_tour_booking_path(@tour.id), class: "btn btn-lg btn-info"%>
 </div>
 
 <div class="text-center">
