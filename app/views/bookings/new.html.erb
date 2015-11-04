@@ -1,0 +1,40 @@
+<div class="well text-left">
+
+  <h4>Just one step away from booking your tour!</h4>
+  <h5>Currently booking tour:<%= @tour.name %> </h5>
+
+  <%= form_for @booking, {url: tour_bookings_path(@tour.id), html: {class: "form-horizontal"}} do |f| %>
+
+    <% if @booking.errors.any? %>
+    <div class="error_messages alert alert-danger">
+      <ul>
+        <% for message in @booking.errors.full_messages %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+
+    <div class="field form-group">
+      <%= f.label :start_date, class: "col-xs-3 control-label" %>
+      <%= f.date_select :start_date, class: "col-xs-4" %>
+    </div>
+    <div class="field form-group">
+      <%= f.label :start_time, class: "col-xs-3 control-label" %>
+      <%= f.time_select :start_time, {minute_step: 30, ampm: true} %>
+    </div>
+    <div class="field form-group">
+      <%= f.label :party_of, class: "col-xs-3 control-label" %>
+      <%= f.select :party_of, options_for_select(0..10), class: "col-xs-4" %>
+    </div>
+    <div class="actions form-group text-center">
+      <button class="btn btn-success"> Send your booking!
+      </button>
+    </div>
+    <div class="form-group text-center">
+    Interested in other tour instead? <%= link_to "See all tours", tours_path%>
+    today!
+    </div>
+  <% end %>
+
+</div>

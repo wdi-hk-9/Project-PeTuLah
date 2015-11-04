@@ -22,6 +22,9 @@ $primary-color: #777;
 body {
   font-family: 'Rye', cursive;
   color: $primary-color;
+  background: image-url("lp-background.jpg") no-repeat;
+  background-size: cover;
+  height: 100%;
 }
 
 nav {
@@ -52,12 +55,6 @@ nav {
 
 .btn-info {
   font-size: 10px;
-}
-
-#lp-background{
-  background: url("http://conference.cs.cityu.edu.hk/wise2010/images/Background.jpg") no-repeat;
-  background-size: cover;
-  height: 100%;
 }
 
 .jumbotron{

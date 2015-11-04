@@ -9,5 +9,9 @@
 </div>
 
 <div class="text-center">
-  <%= link_to 'Back to all tours', tours_path, class: "btn btn-info"%>
+  <%= link_to 'BOOK NOW!', new_tour_booking_path(@tour.id), class: "btn btn-info"%>
+</div>
+
+<div class="text-center">
+  <%= link_to 'Back to all tours', tours_path %>
 </div>
