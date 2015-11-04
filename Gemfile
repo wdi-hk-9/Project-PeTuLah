@@ -18,4 +18,5 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
   gem 'pry-rails'
+  gem 'meta_request'
 end
