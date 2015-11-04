@@ -1,12 +1,12 @@
-<div class="jumbotron">
+<div class="jumbotron tours-index">
   <div class="text-left">
     <%= link_to 'Home', root_path%> -->
     <%= link_to 'All Tours', tours_path, class: "active"%>
   </div>
 
-  <% @tours.each do |tour|%>
-    <div class="tours">
-      <div class="col-md-6 portfolio-item">
+  <div class="row">
+    <% @tours.each do |tour|%>
+      <div class="col-md-6 portfolio-item tours">
         <h3 class="text-left" class="tour-name">
         <%= tour.name %></h3>
         <%= image_tag tour.image, class: "img-responsive tour-images" %>
@@ -15,11 +15,9 @@
           <%= link_to "more details", tour_path(tour.id)%>
         </h5>
       </div>
-    </div>
-  <% end %>
-  <p></p>
-  <p></p>
-<div class="text-center">
-  <%= link_to 'Back to all tours', tours_path %>
-</div>
+    <% end %>
+  </div>
+  <div class="row text-center">
+    <%= link_to 'Back to all tours', tours_path %>
+  </div>
 </div>
