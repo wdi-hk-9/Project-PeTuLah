@@ -3,7 +3,7 @@
   <h4>You are editing tour</h4>
   <p>Tour booked: <%= @booking.tour.name %></p>
 
-  <%= form_for @booking, {METHOD:"POST", html: {class: "form-horizontal"}} do |f| %>
+  <%= form_for @booking, {method: "put", html: {class: "form-horizontal"}} do |f| %>
 
     <% if @booking.errors.any? %>
     <div class="error_messages alert alert-danger">
