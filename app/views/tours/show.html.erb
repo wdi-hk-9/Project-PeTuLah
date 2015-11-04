@@ -1,26 +1,23 @@
-<div class="text-center tours">
+<div class="text-center tours index-show">
   <div class="text-left">
     <%= link_to 'Home', root_path%> -->
     <%= link_to 'All Tours', tours_path, class: "active"%> -->
     <%= @tour.name %>
-    <p></p>
   </div>
   <div class="col-md-6 portfolio-item">
-    <p><%= image_tag @tour.image, class: "img-responsive tour-images"%></p>
+    <%= image_tag @tour.image, class: "img-responsive tour-images"%>
   </div>
   <h2><%= @tour.name %></h2>
   <div class="col-md-6 portfolio-item">
-    <h5>
-      <p><%= @tour.description %></p>
-      <p>Language: <%= @tour.language %></p>
-      <p>Duration: <%= @tour.duration %> minutes</p>
-      <p>Price: HK$ <%= @tour.price %> per person</p>
-    </h5>
+    <p class="veranda text-justify"><%= @tour.description %></p>
+    <p class="veranda text-left"><strong>Language:</strong> <%= @tour.language %></p>
+    <p class="veranda text-left"><strong>Duration:</strong> <%= @tour.duration %> minutes</p>
+    <p class="veranda text-left"><strong>Price:</strong> HK$ <%= @tour.price %> per person</p>
   </div>
 </div>
 
 <div class="text-center">
-  <%= link_to 'BOOK NOW!', new_tour_booking_path(@tour.id), class: "btn btn-info"%>
+  <%= link_to 'BOOK NOW!', new_tour_booking_path(@tour.id), class: "btn btn-lg btn-info"%>
 </div>
 
 <div class="text-center">

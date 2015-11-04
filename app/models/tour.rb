@@ -3,4 +3,8 @@ class Tour < ActiveRecord::Base
   validates :description, presence: true
   has_many :bookings
   has_many :users, through: :bookings
+
+  def self.search(query)
+    where("description like ?", "%#{query}%")
+  end
 end
