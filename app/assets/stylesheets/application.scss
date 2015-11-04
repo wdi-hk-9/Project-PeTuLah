@@ -32,7 +32,7 @@ nav {
 
   li {
     display: inline-block;
-    font-size: 15px;
+    font-size: 18px;
   }
 
   a {
@@ -85,7 +85,7 @@ nav {
     border-radius: 20px;
 
     h1 {
-      font-weight: 200;
+      font-size: 50px;
       text-shadow: 10px -1px 11px rgba(255, 255, 255, 1);
     }
     p {
@@ -100,17 +100,18 @@ nav {
   position: relative;
   width: 100%;
   text-align: center;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 #search-form{
-  background-color: rgba(0, 0, 0, 0.3);
   padding: 17px 15px;
   border-color: transparent;
 }
+
 #search{
   width: 60%;
 }
+
 .form-box {
   background-color: transparent;
   border-color: transparent;
@@ -125,26 +126,17 @@ nav {
   text-transform: uppercase;
 }
 
-.tour-header>h2{
-  margin-top: 0px;
-  margin-bottom: 15px
-}
-
 .field_with_errors input {
   border: 1px solid red;
 }
 
 .form-group{
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .container-fluid{
   margin-top: 12px;
   font-size: 20px;
-}
-
-.tours-img{
-  min-height: 100px
 }
 
 hr.star-primary{

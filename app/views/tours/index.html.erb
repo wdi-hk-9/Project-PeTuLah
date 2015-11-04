@@ -1,20 +1,17 @@
-<div class="jumbotron tours-index">
-  <div class="text-left">
+<div class="container">
+  <h4 class="text-left">
     <%= link_to 'Home', root_path%> -->
-    <%= link_to 'All Tours', tours_path, class: "active"%>
-  </div>
-
-  <div class="row">
-    <% @tours.each do |tour|%>
-      <div class="col-md-6 portfolio-item tours">
-        <h3 class="text-left" class="tour-name">
-        <%= tour.name %></h3>
-        <%= image_tag tour.image, class: "img-responsive tour-images" %>
-        <h5 class="text-justify">
-          <%= tour.description.first(200) %>...
-          <%= link_to "more details", tour_path(tour.id)%>
-        </h5>
-      </div>
-    <% end %>
-  </div>
+    All Tours
+  </h4>
+  <% @tours.each do |tour|%>
+    <div class="col-md-6 portfolio-item">
+      <h3 class="text-left tour-name text-info">
+      <%= tour.name %></h3>
+      <%= image_tag tour.image, class: "img-responsive tour-images" %>
+      <h4 class="text-justify">
+        <%= tour.description.first(200) %>...
+        <%= link_to "more details", tour_path(tour.id)%>
+      </h5>
+    </div>
+  <% end %>
 </div>

@@ -3,14 +3,14 @@
 </div>
 
 <% @bookings.each do |booking|%>
-  <div class=" well bookings">
-    <div class="text-center">
+  <div class="col-sm-4 portfolio-item text-left">
+    <div>
       <h5>Tour name: <%= booking.tour.name%></h5>
     </div>
-    <div class="text-center">
+    <div>
       <h5>Start_date: <%= booking.start_date %></h7>
     </div>
-    <div class="text-center">
+    <div>
       <h5>Party_of: <%= booking.party_of %></h7>
     </div>
     <div class="text-center">

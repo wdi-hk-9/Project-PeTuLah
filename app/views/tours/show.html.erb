@@ -1,15 +1,15 @@
-<div class="text-center tours index-show">
+<div class="container">
   <div class="text-left">
     <%= link_to 'Home', root_path%> -->
-    <%= link_to 'All Tours', tours_path, class: "active"%> -->
+    <%'All Tours', tours_path%> -->
     <%= @tour.name %>
   </div>
-  <div class="col-md-6 portfolio-item">
-    <%= image_tag @tour.image, class: "img-responsive tour-images"%>
+  <div class="col-md-7 portfolio-item img-container">
+    <%= image_tag @tour.image, class: "img-responsive tour-image"%>
   </div>
-  <h2><%= @tour.name %></h2>
-  <div class="col-md-6 portfolio-item">
-    <p class="veranda text-justify"><%= @tour.description %></p>
+  <div class="col-md-5 portfolio-item">
+    <h3 class="text-left text-info"><%= @tour.name %></h3>
+    <p class="veranda text-justify font-size-small"><%= @tour.description %></p>
     <p class="veranda text-left"><strong>Language:</strong> <%= @tour.language %></p>
     <p class="veranda text-left"><strong>Duration:</strong> <%= @tour.duration %> minutes</p>
     <p class="veranda text-left"><strong>Price:</strong> HK$ <%= @tour.price %> per person</p>
@@ -20,6 +20,3 @@
   <%= link_to 'BOOK NOW!', new_tour_booking_path(@tour.id), class: "btn btn-lg btn-info"%>
 </div>
 
-<div class="text-center">
-  <%= link_to 'Back to all tours', tours_path %>
-</div>

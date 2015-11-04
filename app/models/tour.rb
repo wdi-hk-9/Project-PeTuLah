@@ -5,6 +5,6 @@ class Tour < ActiveRecord::Base
   has_many :users, through: :bookings
 
   def self.search(query)
-    where("description like ?", "%#{query}%")
+    where("description ILIKE ?", "%#{query}%")
   end
 end
