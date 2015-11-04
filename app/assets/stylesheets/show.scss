@@ -5,15 +5,17 @@
     font-size: 20px;
   }
 
-  h1 {
+  h2 {
     text-decoration: none;
     text-align: center;
   }
 
   .tour-images {
-    min-width: 350px;
-    height: auto;
     vertical-align: middle;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
   }
+
 }
 
