@@ -1,15 +1,21 @@
-<h1>Bookings#show</h1>
-<p>Find me in app/views/bookings/show.html.erb</p>
+<div class="well text-left">
 
-<div class="well text-center">
-  <p>Tour booked: <%= @booking.tour_id %></p>
-  <p>Tour booked: <%= @booking.tour.name %></p>
-  <p>Tour booked: <%= @booking.tour.description %></p>
-  <p>Date: <%= @booking.start_date %></p>
-  <p>Time: <%= @booking.start_time.hour %>:<%= @booking.start_time.min %></p>
-  <p>Party of: <%= @booking.party_of %></p>
-</div>
+  <h4>Thank you for booking with us. An e-mail has been sent to your inbox.</h4>
+  <h5>We are working on it and will revert. </h5>
 
-<div class="text-center">
-  <%= link_to 'Back to all tours', tours_path %>
+  <div class="well text-center">
+    <p>Tour booked: <%= @booking.tour_id %></p>
+    <p>Tour booked: <%= @booking.tour.name %></p>
+    <p>Tour booked: <%= @booking.tour.description %></p>
+    <p>Date: <%= @booking.start_date %></p>
+    <p>Time: <%= @booking.start_time.hour %>:<%= @booking.start_time.min %></p>
+    <p>Party of: <%= @booking.party_of %></p>
+  </div>
+
+  <div class="text-center">
+    <%= link_to 'See you other bookings', bookings_path %>
+    <br>
+    <%= link_to 'Back to all tours', tours_path %>
+  </div>
+
 </div>
