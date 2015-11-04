@@ -6,14 +6,20 @@
 
   <% @tours.each do |tour|%>
     <div class="tours">
-      <div class="col-md-12 portfolio-item">
-        <h3 class="text-center" class="tour-name"><%= tour.name %></h3>
-        <h4 class="text-justify">
+      <div class="col-md-6 portfolio-item">
+        <h3 class="text-left" class="tour-name">
+        <%= tour.name %></h3>
+        <%= image_tag tour.image, class: "img-responsive tour-images" %>
+        <h5 class="text-justify">
           <%= tour.description.first(200) %>...
           <%= link_to "more details", tour_path(tour.id)%>
-        </h4>
-        <%= image_tag tour.image, class: "img-responsive tour-images" %>
+        </h5>
       </div>
     </div>
   <% end %>
+  <p></p>
+  <p></p>
+<div class="text-center">
+  <%= link_to 'Back to all tours', tours_path %>
+</div>
 </div>
