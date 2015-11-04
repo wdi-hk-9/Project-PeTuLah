@@ -1,13 +1,21 @@
 <div class="text-center tours">
-  <h2><%= @tour.name %></h2>
+  <div class="text-left">
+    <%= link_to 'Home', root_path%> -->
+    <%= link_to 'All Tours', tours_path, class: "active"%> -->
+    <%= @tour.name %>
+    <p></p>
+  </div>
   <div class="col-md-6 portfolio-item">
     <p><%= image_tag @tour.image, class: "img-responsive tour-images"%></p>
   </div>
+  <h2><%= @tour.name %></h2>
   <div class="col-md-6 portfolio-item">
-    <p><%= @tour.description %></p>
-    <p>Language: <%= @tour.language %></p>
-    <p>Duration: <%= @tour.duration %> minutes</p>
-    <p>Price: <%= @tour.price %></p>
+    <h5>
+      <p><%= @tour.description %></p>
+      <p>Language: <%= @tour.language %></p>
+      <p>Duration: <%= @tour.duration %> minutes</p>
+      <p>Price: HK$ <%= @tour.price %> per person</p>
+    </h5>
   </div>
 </div>
 
