@@ -17,8 +17,9 @@ class BookingsController < ApplicationController
   def create
     @booking = current_user.bookings.new(booking_params)
     @booking.tour_id = params[:tour_id]
+
     if @booking.save
-      flash[:success] = "Booking success!"
+    flash[:success] = "Booking success!"
       redirect_to booking_path(@booking.id)
     else
       flash[:danger] = "Booking failed!"
@@ -28,6 +29,6 @@ class BookingsController < ApplicationController
 
 private
   def booking_params
-  params.require(:booking).permit( :start_date, :start_time, :party_of)
+    params.require(:booking).permit( :start_date, :start_time, :party_of)
   end
 end

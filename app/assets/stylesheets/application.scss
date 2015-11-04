@@ -21,10 +21,6 @@ $primary-color: #777;
 
 body {
   font-family: 'Rye', cursive;
-  color: $primary-color;
-  background: image-url("lp-background.jpg") no-repeat;
-  background-size: cover;
-  height: 100%;
 }
 
 nav {
@@ -50,7 +46,6 @@ nav {
     color: #FF5F49;
     font-size: 30px;
   }
-
 }
 
 .btn-info {
