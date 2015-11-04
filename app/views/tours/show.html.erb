@@ -1,5 +1,5 @@
 <div class="text-center tours">
-<div class="text-left">
+  <div class="text-left">
     <%= link_to 'Home', root_path%> -->
     <%= link_to 'All Tours', tours_path, class: "active"%> -->
     <%= @tour.name %>
@@ -22,7 +22,7 @@
 <div class="text-center">
   <%= link_to 'BOOK NOW!', new_tour_booking_path(@tour.id), class: "btn btn-info"%>
 </div>
-<p></p>
+
 <div class="text-center">
   <%= link_to 'Back to all tours', tours_path %>
 </div>
