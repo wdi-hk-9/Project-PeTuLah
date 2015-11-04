@@ -1,7 +1,8 @@
 <div class="well text-left">
-
-  <h4>Just one step away from booking your tour!</h4>
-  <h5>Currently booking tour:<%= @tour.name %> </h5>
+  <div class="text-center">
+    <h2>You are just one step away from booking your tour!</h2>
+    <h3 class="text-info">Currently booking tour for: <%= @tour.name %> </h3>
+  </div>
 
   <%= form_for @booking, {url: tour_bookings_path(@tour.id), html: {class: "form-horizontal"}} do |f| %>
 
@@ -17,27 +18,26 @@
 
     <div class="field form-group">
       <%= f.label :start_date, class: "col-xs-3 control-label" %>
-      <%= f.date_select :start_date, class: "col-xs-4" %>
+      <%= f.date_select :start_date, {}, class: "input-lg" %>
     </div>
     <div class="field form-group">
       <%= f.label :start_time, class: "col-xs-3 control-label" %>
-      <%= f.time_select :start_time, {minute_step: 30, ampm: true} %>
+      <%= f.time_select :start_time, {minute_step: 30, ampm: true}, class: "input-lg" %>
     </div>
     <div class="field form-group">
       <%= f.label :party_of, class: "col-xs-3 control-label" %>
-      <%= f.select :party_of, options_for_select(1..10), class: "col-xs-4" %>
+      <%= f.select :party_of, options_for_select(1..10), {}, class: "input-lg" %>
     </div>
     <div class="field form-group">
       <%= f.label :remarks, class: "col-xs-3 control-label" %>
-      <%= f.text_field :remarks, class: "col-xs-4 input-lg" %>
+      <%= f.text_field :remarks, class: "col-xs-7 input-lg" %>
     </div>
     <div class="actions form-group text-center">
       <button class="btn btn-success"> Send your booking!
       </button>
     </div>
     <div class="form-group text-center">
-      Interested in other tour instead? <%= link_to "See all tours", tours_path%>
-    today!
+      Interested in another tour instead? <%= link_to "See all tours", tours_path%>
     </div>
   <% end %>
 </div>

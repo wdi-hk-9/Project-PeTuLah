@@ -1,7 +1,8 @@
 <div class="well text-left">
-
-  <h4>You are editing tour</h4>
-  <p>Tour booked: <%= @booking.tour.name %></p>
+  <div class="text-center">
+    <h2>You are editing tour</h2>
+    <h4 class ="text-info">Tour booked: <%= @booking.tour.name %></h4>
+  </div>
 
   <%= form_for @booking, {method: "put", html: {class: "form-horizontal"}} do |f| %>
 
@@ -17,19 +18,19 @@
 
     <div class="field form-group">
       <%= f.label :start_date, class: "col-xs-3 control-label" %>
-      <%= f.date_select :start_date, class: "col-xs-4" %>
+      <%= f.date_select :start_date, {}, class: "input-lg" %>
     </div>
     <div class="field form-group">
       <%= f.label :start_time, class: "col-xs-3 control-label" %>
-      <%= f.time_select :start_time, {minute_step: 30, ampm: true} %>
+      <%= f.time_select :start_time, {minute_step: 30, ampm: true}, class: "input-lg" %>
     </div>
     <div class="field form-group">
       <%= f.label :party_of, class: "col-xs-3 control-label" %>
-      <%= f.select :party_of, options_for_select(1..10), class: "col-xs-4" %>
+      <%= f.select :party_of, options_for_select(1..10), {}, class: "input-lg" %>
     </div>
     <div class="field form-group">
       <%= f.label :remarks, class: "col-xs-3 control-label" %>
-      <%= f.text_field :remarks, class: "col-xs-4 input-lg" %>
+      <%= f.text_field :remarks, class: "col-xs-7 input-lg" %>
     </div>
     <div class="actions form-group text-center">
       <button class="btn btn-success"> Edit your booking!
