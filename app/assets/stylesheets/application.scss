@@ -71,7 +71,7 @@ nav {
 .lp-main {
   position: relative;
   width: 100%;
-  min-height: 520px;
+  min-height: 550px;
   text-align: center;
   background: image-url("lp-background.jpg") no-repeat;
   background-position: center;
@@ -79,23 +79,19 @@ nav {
 
   .lp-main-content {
     position: relative;
-    width: 100%;
-    padding: 100px 15px 350px;
-    text-align: center;
+    margin: 100px 0 200px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
 
-    .lp-main-content-inner {
-      background-color: rgba(255, 255, 255, 0.3);
-      border-radius: 20px;
-
-      h1 {
-        font-weight: 200;
-        text-shadow: 10px -1px 11px rgba(255, 255, 255, 1);
-      }
-      p {
-        margin-bottom: 20px;
-        font-weight: 100;
-        text-shadow: 3px 0px 5px rgba(149, 150, 150, 1);
-      }
+    h1 {
+      font-weight: 200;
+      text-shadow: 10px -1px 11px rgba(255, 255, 255, 1);
+    }
+    p {
+      margin-bottom: 20px;
+      font-weight: 100;
+      text-shadow: 3px 0px 5px rgba(149, 150, 150, 1);
     }
   }
 }
@@ -103,17 +99,13 @@ nav {
 .lp-filter{
   position: relative;
   width: 100%;
-  padding: 0px 15px 0px;
   text-align: center;
-}
-
-.lp-filter-row{
-  background-color: rgba(0, 0, 0, 0.3);
-  min-height: 70px;
+  background-color: transparent;
 }
 
 #search-form{
-  margin: 12px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 17px 15px;
   border-color: transparent;
 }
 #search{
