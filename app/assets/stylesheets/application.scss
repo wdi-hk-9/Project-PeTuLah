@@ -24,7 +24,6 @@ body {
 }
 
 nav {
-
   ul {
     margin: 0;
     padding: 0;
@@ -33,6 +32,7 @@ nav {
 
   li {
     display: inline-block;
+    font-size: 15px;
   }
 
   a {
@@ -43,18 +43,88 @@ nav {
   }
 
   .navbar-brand {
-    color: #FF5F49;
-    font-size: 30px;
+    font-size: 40px;
   }
 }
 
-.btn-info {
-  font-size: 10px;
+.jumbotron{
+  padding-top: 0px;
 }
 
-.jumbotron{
-  min-height: 500px;
-  font: white solid;
+.lp-div{
+  padding: 0px;
+}
+
+#main-nav{
+    margin-bottom: 0px;
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+.page-header{
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding-bottom: 0px;
+}
+
+
+.lp-main {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  text-align: center;
+  background: image-url("lp-background.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.lp-main .lp-main-content {
+  position: relative;
+  width: 100%;
+  padding: 100px 15px 350px;
+  text-align: center;
+}
+
+.lp-main .lp-main-content .lp-main-content-inner {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+}
+
+.lp-main .lp-main-content .lp-main-content-inner h1 {
+  font-weight: 200;
+  text-shadow: 10px -1px 11px rgba(255, 255, 255, 1);
+}
+
+.lp-main .lp-main-content .lp-main-content-inner p {
+  margin-bottom: 20px;
+  font-weight: 100;
+  text-shadow: 3px 0px 5px rgba(149, 150, 150, 1);
+  // color: rgba(255,255,255,.7);
+}
+
+.lp-filter{
+  position: relative;
+  width: 100%;
+  padding: 0px 15px 0px;
+  text-align: center;
+}
+
+.lp-filter-row{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.form-box {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.intro{
+  text-align: center;
+}
+
+.btn {
+  border-radius: 20px;
+  text-transform: uppercase;
 }
 
 .tour-header>h2{
@@ -72,9 +142,19 @@ nav {
 
 .container-fluid{
   margin-top: 12px;
-
+  font-size: 20px;
 }
 
 .tours-img{
   min-height: 100px
+}
+
+hr.star-primary{
+  border-color: #2c3e50;
+  margin: 25px auto 30px;
+  padding: 0;
+  max-width: 200px;
+  border: 0;
+  border-top: solid 5px;
+  text-align: center;
 }
