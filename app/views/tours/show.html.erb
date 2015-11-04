@@ -1,4 +1,4 @@
-<div class="text-center tours">
+<div class="text-center tours index-show">
   <div class="text-left">
     <%= link_to 'Home', root_path%> -->
     <%= link_to 'All Tours', tours_path, class: "active"%> -->
@@ -9,12 +9,10 @@
   </div>
   <h2><%= @tour.name %></h2>
   <div class="col-md-6 portfolio-item">
-    <h5>
-      <%= @tour.description %>
-      Language: <%= @tour.language %>
-      Duration: <%= @tour.duration %> minutes
-      Price: HK$ <%= @tour.price %> per person
-    </h5>
+    <p class="veranda text-justify"><%= @tour.description %></p>
+    <p class="veranda text-left"><strong>Language:</strong> <%= @tour.language %></p>
+    <p class="veranda text-left"><strong>Duration:</strong> <%= @tour.duration %> minutes</p>
+    <p class="veranda text-left"><strong>Price:</strong> HK$ <%= @tour.price %> per person</p>
   </div>
 </div>
 
