@@ -23,14 +23,14 @@ body {
   font-family: 'Rye';
 }
 
-.jumbotron{
+.jumbotron {
   padding-top: 10px;
   background-color: transparent;
 }
 
-.lp-div{
+.lp-div {
   padding: 0px;
-  .alert{
+  .alert {
     margin-bottom: 5px;
   }
 }
@@ -41,8 +41,8 @@ body {
   border-bottom-color: black;
   margin-bottom: 5px;
 
-  #main-nav{
-  background-color: transparent;
+  #main-nav {
+    background-color: transparent;
   }
 }
 
@@ -97,19 +97,19 @@ nav {
   }
 }
 
-.lp-filter{
+.lp-filter {
   position: relative;
   width: 100%;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-#search-form{
+#search-form {
   padding: 17px 15px;
   border-color: transparent;
 }
 
-#search{
+#search {
   width: 60%;
 }
 
@@ -131,16 +131,16 @@ nav {
   border: 1px solid red;
 }
 
-.form-group{
+.form-group {
   font-size: 18px;
 }
 
-.container-fluid{
+.container-fluid {
   margin-top: 12px;
   font-size: 20px;
 }
 
-hr.star-primary{
+hr.star-primary {
   border-color: #2c3e50;
   margin: 10px auto 10px;
   padding: 0;
