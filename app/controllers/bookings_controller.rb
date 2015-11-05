@@ -19,8 +19,9 @@ class BookingsController < ApplicationController
     @booking.tour_id = params[:tour_id]
 
     if @booking.save
-    flash[:success] = "Booking success!"
+      flash[:success] = "Booking success!"
       redirect_to booking_path(@booking.id)
+      UserMailer.booking_confirmation(@booking).deliver
     else
       flash[:danger] = "Booking failed!"
       redirect_to new_tour_booking_path(params[:tour_id])
