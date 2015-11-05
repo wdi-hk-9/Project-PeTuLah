@@ -13,6 +13,10 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
 gem 'bootstrap-sass'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
