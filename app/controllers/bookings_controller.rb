@@ -20,8 +20,8 @@ class BookingsController < ApplicationController
 
     if @booking.save
       flash[:success] = "Booking success!"
+      UserMailer.booking_confirmation(@booking).deliver_now
       redirect_to booking_path(@booking.id)
-      UserMailer.booking_confirmation(@booking).deliver
     else
       flash[:danger] = "Booking failed!"
       redirect_to new_tour_booking_path(params[:tour_id])

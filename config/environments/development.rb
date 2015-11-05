@@ -17,16 +17,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
 
   # Change mail delvery to either :smtp, :sendmail, :file, :test
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-  address: "smtp.gmail.com",
-  port: 587,
-  domain: "petulah.com",
-  authentication: "plain",
-  enable_starttls_auto: true,
-  user_name: ENV["petulah2015"],
-  password: ENV["fermartin"]
-}
+  config.action_mailer.delivery_method = :sendmail
 
 # Specify what domain to use for mailer URLs
   config.action_mailer.default_url_options = {host: "localhost:3000"}
