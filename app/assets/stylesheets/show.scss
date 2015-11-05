@@ -1,18 +1,18 @@
 .tour-image {
-  min-height: 400px;
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
+  max-height: 80%;
+  img {
+    max-height: 80%;
+  }
 }
 
-.veranda {
-  font-family: 'Arial';
+@media screen and (min-width: 992px) {
+  .img-container {
+    height: 460px;
+  }
 }
 
-p {
-  margin-bottom: 0px;
-}
-
-.img-container{
-  width: 100%;
+@media screen and (min-width: 1200px) {
+  .img-container {
+    height: 520px;
+  }
 }

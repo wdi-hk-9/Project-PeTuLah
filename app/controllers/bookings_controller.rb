@@ -35,7 +35,8 @@ class BookingsController < ApplicationController
   def update
     @booking = Booking.find(params[:id])
     if @booking.update(booking_params)
-      flash[:success] = "Booking is edited!"
+      flash[:success] = "Booking is edited! Revised details sent to your e-mail."
+      UserMailer.booking_confirmation(@booking).deliver_now
       redirect_to booking_path(@booking.id)
     else
       flash[:danger] = "Changes to booking cannot be saved!"

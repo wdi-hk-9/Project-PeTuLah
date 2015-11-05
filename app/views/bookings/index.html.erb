@@ -12,7 +12,8 @@
     <p>Start Time: <%= booking.start_time.strftime("%I:%M%p") %></p>
     <p>Duration: <%= booking.tour.duration %> minutes</p>
     <p>People: <%= booking.party_of %></p>
-    <p class="text-right"><%= link_to "Edit booking", edit_booking_path(booking.id) %></p>
+    <p>Total Amount: HK$ <%= booking.get_price %></p>
+    <p class="text-center"><%= link_to "Edit booking", edit_booking_path(booking.id) %></p>
   </div>
 <% end %>
 
