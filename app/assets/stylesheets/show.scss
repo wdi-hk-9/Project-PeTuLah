@@ -1,17 +1,8 @@
-.tour-name {
-  font-size: 20px;
-}
-
-.img-container {
-  width: 100%;
-  overflow: hidden;
-}
-
 .tour-image {
   min-height: 400px;
   height: auto;
   max-width: 100%;
-  overflow: hidden;
+  vertical-align: middle;
 }
 
 .veranda {
@@ -20,4 +11,8 @@
 
 p {
   margin-bottom: 0px;
+}
+
+.img-container{
+  width: 100%;
 }
