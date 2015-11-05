@@ -1,23 +1,18 @@
-.tour-name {
-  font-size: 20px;
-}
-
-.img-container {
-  width: 100%;
-  overflow: hidden;
-}
-
 .tour-image {
-  min-height: 400px;
-  height: auto;
-  max-width: 100%;
-  overflow: hidden;
+  max-height: 80%;
+  img {
+    max-height: 80%;
+  }
 }
 
-.veranda {
-  font-family: 'Arial';
+@media screen and (min-width: 992px) {
+  .img-container {
+    height: 460px;
+  }
 }
 
-p {
-  margin-bottom: 0px;
+@media screen and (min-width: 1200px) {
+  .img-container {
+    height: 520px;
+  }
 }

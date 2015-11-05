@@ -4,4 +4,8 @@ class Booking < ActiveRecord::Base
   validates :party_of, presence: true
   belongs_to :user
   belongs_to :tour
+
+  def get_price
+    self.party_of * self.tour.price
+  end
 end

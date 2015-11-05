@@ -11,6 +11,7 @@
     <p>Start Time: <%= @booking.start_time.strftime("%I:%M%p") %></p>
     <p>Duration: <%= @booking.tour.duration %> minutes</p>
     <p>People: <%= @booking.party_of %></p>
+    <p>Total Amount: HK$ <%= @booking.get_price %></p>
   </div>
 
 

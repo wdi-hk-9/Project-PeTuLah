@@ -1,22 +1,21 @@
-<<<<<<< Updated upstream
 <div class="container">
   <h4 class="text-left">
-=======
-<div class="jumbotron">
-  <div class="text-left">
->>>>>>> Stashed changes
     <%= link_to 'Home', root_path%> -->
     All Tours
   </h4>
   <% @tours.each do |tour|%>
-    <div class="col-md-6 portfolio-item">
+    <div class="col-md-6 portfolio-item tour-container">
       <h3 class="text-left tour-name text-info">
       <%= tour.name %></h3>
-      <%= image_tag tour.image, class: "img-responsive tour-images" %>
-      <h4 class="text-justify">
-        <%= tour.description.first(200) %>...
-        <%= link_to "more details", tour_path(tour.id)%>
-      </h5>
+      <div class="tour-images">
+        <%= image_tag tour.image, class: "img-responsive" %>
+      </div>
+      <div>
+        <h4 class="text-justify">
+          <%= tour.description.first(200) %>...
+          <%= link_to "more details", tour_path(tour.id)%>
+        </h4>
+      </div>
     </div>
   <% end %>
 </div>

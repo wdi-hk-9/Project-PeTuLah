@@ -19,7 +19,8 @@ class BookingsController < ApplicationController
     @booking.tour_id = params[:tour_id]
 
     if @booking.save
-    flash[:success] = "Booking success!"
+      flash[:success] = "Booking success!"
+      UserMailer.booking_confirmation(@booking).deliver_now
       redirect_to booking_path(@booking.id)
     else
       flash[:danger] = "Booking failed!"
@@ -34,7 +35,8 @@ class BookingsController < ApplicationController
   def update
     @booking = Booking.find(params[:id])
     if @booking.update(booking_params)
-      flash[:success] = "Booking is edited!"
+      flash[:success] = "Booking is edited! Revised details sent to your e-mail."
+      UserMailer.booking_confirmation(@booking).deliver_now
       redirect_to booking_path(@booking.id)
     else
       flash[:danger] = "Changes to booking cannot be saved!"

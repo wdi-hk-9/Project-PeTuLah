@@ -1,0 +1,19 @@
+Hi <%= @booking.user.first_name%>,
+
+Thank you for booking. Please find your booking details below.
+
+Your booking details
+Booking id: <%= @booking.id %>
+Tour name: <%= @booking.tour.name %>
+Date: <%= @booking.start_date %>
+Start Time: <%= @booking.start_time.strftime("%I:%M%p") %>
+Duration: <%= @booking.tour.duration %> minutes
+People: <%= @booking.party_of %>
+Total Amount: HK$ <%= @booking.get_price %>
+
+
+Yours sincerely,
+
+Petulah team
+
+<%= bookings_url %>
