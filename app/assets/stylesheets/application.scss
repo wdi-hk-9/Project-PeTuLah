@@ -23,7 +23,31 @@ body {
   font-family: 'Rye';
 }
 
+.jumbotron{
+  padding-top: 10px;
+  background-color: transparent;
+}
+
+.lp-div{
+  padding: 0px;
+  .alert{
+    margin-bottom: 5px;
+  }
+}
+
+.navbar {
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom-color: black;
+  margin-bottom: 5px;
+
+  #main-nav{
+  background-color: transparent;
+  }
+}
+
 nav {
+
   ul {
     margin: 0;
     padding: 0;
@@ -38,7 +62,6 @@ nav {
   a {
     display: block;
     padding: 6px 12px;
-    text-decoration: none;
     color: #2A31FF;
   }
 
@@ -47,33 +70,12 @@ nav {
   }
 }
 
-.jumbotron{
-  padding-top: 0px;
-  background-color: transparent;
-}
-
-.lp-div{
-  padding: 0px;
-}
-
-#main-nav{
-  margin-bottom: 0px;
-  background-color: transparent;
-  border-color: transparent;
-  }
-
-.page-header{
-  margin-top: 0px;
-  margin-bottom: 5px;
-  padding-bottom: 0px;
-}
-
 .lp-main {
   position: relative;
   width: 100%;
   min-height: 550px;
   text-align: center;
-  background: image-url("lp-background.jpg") no-repeat;
+  background: image-url("landing-hk.png") no-repeat;
   background-position: center;
   background-size: cover;
 
@@ -81,7 +83,7 @@ nav {
     position: relative;
     margin: 100px 0 200px;
     height: 150px;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 20px;
 
     h1 {
@@ -90,8 +92,7 @@ nav {
     }
     p {
       margin-bottom: 20px;
-      font-weight: 100;
-      text-shadow: 3px 0px 5px rgba(149, 150, 150, 1);
+      text-shadow: 10px -1px 11px rgba(255, 255, 255, 1);
     }
   }
 }
