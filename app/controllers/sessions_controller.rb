@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to "/"
+      redirect_to tours_path
       flash[:success] = "Logged in!"
     else
       flash[:danger] = "Invalid login credentials."

@@ -1,21 +1,10 @@
- .tours-index {
-  .tours {
-    background-color: #fffcfc;
-    height: 490px;
-  }
+.tour-name {
+  font-size: 20px;
+}
 
-  .tour-name {
-    font-size: 20px;
-  }
+.tour-images {
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
 
-  h1 {
-    text-decoration: none;
-    text-align: center;
-  }
-
-  .tour-images {
-    min-width: 350px;
-    height: auto;
-    vertical-align: middle;
-  }
- }

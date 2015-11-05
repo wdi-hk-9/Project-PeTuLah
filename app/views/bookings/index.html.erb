@@ -3,23 +3,16 @@
 </div>
 
 <% @bookings.each do |booking|%>
-  <div class=" well bookings">
-    <div class="text-center">
-      <h5>Tour name: <%= booking.tour.name%></h5>
-    </div>
-    <div class="text-center">
-      <h5>Start_date: <%= booking.start_date %></h7>
-    </div>
-    <div class="text-center">
-      <h5>Party_of: <%= booking.party_of %></h7>
-    </div>
-    <div class="text-center">
-      <%= link_to "Tour details", tour_path(booking.tour_id), class: "btn btn-info" %>
-      <%= link_to "Edit booking", edit_booking_path(booking.tour_id), class: "btn btn-info" %>
-    </div>
+  <div class="col-sm-6 portfolio-item text-left container well">
+    <p>Booking id: <%= booking.id%></p>
+    <p>Tour name: <%= booking.tour.name%>
+    <%= link_to "...details", tour_path(booking.tour_id) %>
+    </p>
+    <p>Date: <%= booking.start_date %></p>
+    <p>Start Time: <%= booking.start_time.strftime("%I:%M%p") %></p>
+    <p>Duration: <%= booking.tour.duration %> minutes</p>
+    <p>People: <%= booking.party_of %></p>
+    <p class="text-right"><%= link_to "Edit booking", edit_booking_path(booking.id) %></p>
   </div>
 <% end %>
 
-<div class="text-right">
-  <%= link_to 'Back to homepage', root_path%>
-</div>

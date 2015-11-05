@@ -23,7 +23,31 @@ body {
   font-family: 'Rye';
 }
 
+.jumbotron{
+  padding-top: 10px;
+  background-color: transparent;
+}
+
+.lp-div{
+  padding: 0px;
+  .alert{
+    margin-bottom: 5px;
+  }
+}
+
+.navbar {
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom-color: black;
+  margin-bottom: 5px;
+
+  #main-nav{
+  background-color: transparent;
+  }
+}
+
 nav {
+
   ul {
     margin: 0;
     padding: 0;
@@ -32,13 +56,12 @@ nav {
 
   li {
     display: inline-block;
-    font-size: 15px;
+    font-size: 18px;
   }
 
   a {
     display: block;
     padding: 6px 12px;
-    text-decoration: none;
     color: #2A31FF;
   }
 
@@ -47,51 +70,29 @@ nav {
   }
 }
 
-.jumbotron{
-  padding-top: 0px;
-  background-color: transparent;
-}
-
-.lp-div{
-  padding: 0px;
-}
-
-#main-nav{
-  margin-bottom: 0px;
-  background-color: transparent;
-  border-color: transparent;
-  }
-
-.page-header{
-  margin-top: 0px;
-  margin-bottom: 5px;
-  padding-bottom: 0px;
-}
-
 .lp-main {
   position: relative;
   width: 100%;
   min-height: 550px;
   text-align: center;
-  background: image-url("lp-background.jpg") no-repeat;
+  background: image-url("landing-hk.png") no-repeat;
   background-position: center;
   background-size: cover;
 
   .lp-main-content {
     position: relative;
-    margin: 100px 0 200px;
-    height: 150px;
-    background-color: rgba(255, 255, 255, 0.3);
+    margin: 150px 0 150px;
+    height: 30%;
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 20px;
 
     h1 {
-      font-weight: 200;
+      font-size: 50px;
       text-shadow: 10px -1px 11px rgba(255, 255, 255, 1);
     }
     p {
       margin-bottom: 20px;
-      font-weight: 100;
-      text-shadow: 3px 0px 5px rgba(149, 150, 150, 1);
+      text-shadow: 10px -1px 11px rgba(255, 255, 255, 1);
     }
   }
 }
@@ -100,17 +101,18 @@ nav {
   position: relative;
   width: 100%;
   text-align: center;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 #search-form{
-  background-color: rgba(0, 0, 0, 0.3);
   padding: 17px 15px;
   border-color: transparent;
 }
+
 #search{
   width: 60%;
 }
+
 .form-box {
   background-color: transparent;
   border-color: transparent;
@@ -125,17 +127,12 @@ nav {
   text-transform: uppercase;
 }
 
-.tour-header>h2{
-  margin-top: 0px;
-  margin-bottom: 15px
-}
-
 .field_with_errors input {
   border: 1px solid red;
 }
 
 .form-group{
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .container-fluid{
@@ -143,15 +140,11 @@ nav {
   font-size: 20px;
 }
 
-.tours-img{
-  min-height: 100px
-}
-
 hr.star-primary{
   border-color: #2c3e50;
-  margin: 25px auto 30px;
+  margin: 10px auto 10px;
   padding: 0;
-  max-width: 200px;
+  max-width: 30%;
   border: 0;
   border-top: solid 5px;
   text-align: center;

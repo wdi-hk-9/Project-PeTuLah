@@ -1,27 +1,23 @@
-.col-xs-12 {
-  background-color: #fbfbfb;
+.tour-name {
+  font-size: 20px;
 }
 
-.tours {
-  background-color: #fffcfc;
+.img-container{
+  width: 100%;
+  overflow: hidden;
+}
 
-  .tour-name {
-    font-size: 20px;
-  }
+.tour-image {
+  min-height: 400px;
+  height: auto;
+  max-width: 100%;
+  overflow: hidden;
+}
 
-  h2 {
-    text-decoration: none;
-    text-align: center;
-  }
+.veranda {
+  font-family: 'Arial';
+}
 
-  .tour-images {
-    vertical-align: middle;
-    display: block;
-    margin-left: auto;
-    margin-right: auto
-  }
-
-  .veranda {
-    font-family: 'Veranda';
-  }
+p {
+  margin-bottom: 0px;
 }
