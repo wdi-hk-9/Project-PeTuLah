@@ -23,11 +23,6 @@ body {
   font-family: 'Rye';
 }
 
-.jumbotron {
-  padding-top: 10px;
-  background-color: transparent;
-}
-
 .lp-div {
   padding: 0px;
   .alert {
@@ -39,7 +34,7 @@ body {
   background-color: transparent;
   border-color: transparent;
   border-bottom-color: black;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 
   #main-nav {
     background-color: transparent;
@@ -78,10 +73,10 @@ nav {
   background: image-url("landing-hk.png") no-repeat;
   background-position: center;
   background-size: cover;
+  padding-top: 13em;
 
   .lp-main-content {
     position: relative;
-    margin: 150px 0 150px;
     height: 30%;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 20px;
@@ -98,19 +93,22 @@ nav {
 }
 
 .lp-filter {
-  position: relative;
+  position: absolute;
+  bottom: 0;
   width: 100%;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.3);
+  min-height: 56px;
 }
 
 #search-form {
-  padding: 17px 15px;
-  border-color: transparent;
+  margin: 0px;
+  padding-top: 10px;
 }
 
 #search {
   width: 60%;
+  border-radius: 5px;
 }
 
 .form-box {
@@ -148,4 +146,12 @@ hr.star-primary {
   border: 0;
   border-top: solid 5px;
   text-align: center;
+}
+
+.well{
+  background-color: rgba(107, 135, 153, 0.6)
+}
+
+.booking-box{
+  margin-left: 8px;
 }

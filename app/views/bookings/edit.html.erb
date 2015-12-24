@@ -1,7 +1,7 @@
 <div class="well text-left">
   <div class="text-center">
-    <h2>You are editing tour</h2>
-    <h4 class ="text-info">Tour booked: <%= @booking.tour.name %></h4>
+    <h2>Got some changes? Let us know so we can plan better!</h2>
+    <h4 class ="text-info">Editing tour booking: <%= @booking.tour.name %></h4>
   </div>
 
   <%= form_for @booking, {method: "put", html: {class: "form-horizontal"}} do |f| %>
@@ -33,7 +33,7 @@
       <%= f.text_field :remarks, class: "col-xs-7 input-lg" %>
     </div>
     <div class="actions form-group text-center">
-      <button class="btn btn-success"> Edit your booking!
+      <button class="btn btn-success"> Update your booking!
       </button>
     </div>
   <% end %>

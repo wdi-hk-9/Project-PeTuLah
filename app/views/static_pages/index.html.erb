@@ -5,7 +5,7 @@
   </div>
   <div class="lp-filter text-center col-xs-12">
     <%= form_tag(tours_path, :method => "get", class: "navbar-form", id: "search-form") do %>
-      <%= text_field_tag :search, params[:search], class: "span2", placeholder: "What tour are you looking for? e.g. flower" %>
+      <%= text_field_tag :search, params[:search], class: "span2", placeholder: "e.g. Kowloon" %>
       <button class="btn btn-group btn-default" type="submit"> Search
       </button>
     <% end %>
@@ -18,7 +18,7 @@
         <h3 class="section-heading">How it works</h3>
         <hr class="star-primary">
         </hr>
-        <p class="text-light"> Book here. We process your booking in 24 hours. You will get an e-mail and we will come back to you.</p>
+        <p class="text-light"> Book here. We process your booking in 24 hours. After booking, you will get an e-mail and we will come back to you.</p>
       </div>
     </div>
   </div>
