@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>ProjectPetulah</title>
-    <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Rye', media: 'all'%>
+    <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Bitter', media: 'all'%>
+    <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Raleway', media: 'all'%>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
     <%= favicon_link_tag 'petu-favi.ico', rel: "shortcut icon" %>
@@ -15,13 +16,9 @@
           <div class="alert alert-<%= key %>"><%= value %></div>
         <% end %>
         <%= yield %>
-      </div>
-
-      <footer class="footer text-center">
-        <div class="container text-muted">
+        <div class="text-center footer">
           <p>Andrew Alekseev and Charlotte Kwan &copy; 2016 All Rights Reserved.</p>
         </div>
-      </footer>
-
+      </div>
   </body>
 </html>
